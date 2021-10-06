@@ -1,0 +1,56 @@
+<img src="img/redis-logo-red-white-rgb.png" height=100/>
+
+## Building lightning fast Java applications using Redis, Spring Data and Spring Session
+In this hands-on lab you will learn how to build lightning fast Java applications using Redis and some of its datastructures and modules, together with Spring Data and Spring Session. You will learn how easy it is to build extremely fast applications using only a minimum of code. The entire hands-on lab is self-service and is made up of several exercises. Each exercise comes with a working solution, so feel free to take a peek in case you get stuck!
+
+## Prerequisites
+
+You are expected to bring:
+
+* A laptop with Linux, MacOS or Windows with WSL or Linux running in a virtual machine.
+* A working internet connection (use corporate proxies or bad WiFi at your own peril)
+
+You are expected to have installed:
+
+* [JDK 16 or higher](https://adoptopenjdk.net/?variant=openjdk16&jvmVariant=hotspot) (Note: you should be fine on 8 or up, but we tested this on 16.)
+* An IDE of your choice, e.g. [vscode](https://code.visualstudio.com/), [idea](https://www.jetbrains.com/idea/), [eclipse](https://www.eclipse.org/eclipseide/) or [netbeans](https://netbeans.apache.org/)
+* Docker desktop (Note: another way of running a Docker container locally is also fine)
+
+We expect you to be somewhat familiar with Java but if you're not: don't worry, working source code is provided for all exercises in this hands-on lab.
+
+## Installing the Redis CLI and verifying that it correctly installed
+
+MacOS:
+
+```bash
+brew install redis
+redis-cli --version
+```
+
+Linux:
+
+```bash
+sudo apt install redis-server
+redis-cli --version
+```
+
+You should now be all set and ready to go!
+
+## Getting started
+This hands-on lab consists of multiple exercises, see the links below. Each exercise has a goal and a set of sub goals to achieve. A working solution is also provided as well as several hints in case you get stuck. Start with exercise 1 and work your way from there. Good luck and enjoy!
+
+
+## Exercises
+
+* Exercise 1: [start](exercises/exercise-1-start.md), [solution](exercises/exercise-1-solution.md)
+* Exercise 2: [start](exercises/exercise-2-start.md), [solution](exercises/exercise-2-solution.md)
+* Exercise 3: [start](exercises/exercise-3-start.md), [solution](exercises/exercise-3-solution.md)
+* Exercise 4: [start](exercises/exercise-4-start.md), [solution](exercises/exercise-4-solution.md)
+
+
+## Tips
+
+* Stuck? The exercises have hints to help you!
+* Stuck? Ask your neighbour to pair with you!
+* Stuck? Every exercise has a working solution right here!
+* Still Stuck? Ask one of the instructors!
