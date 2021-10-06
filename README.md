@@ -1,4 +1,4 @@
-<img src="img/redis-logo-red-white-rgb.png" height=100/>
+<img src="img/redis-logo-full-color-rgb.png" height=100/>
 
 ## Building lightning fast Java applications using Redis, Spring Data and Spring Session
 In this hands-on lab you will learn how to build lightning fast Java applications using Redis and some of its datastructures and modules, together with Spring Data and Spring Session. You will learn how easy it is to build extremely fast applications using only a minimum of code. The entire hands-on lab is self-service and is made up of several exercises. Each exercise comes with a working solution, so feel free to take a peek in case you get stuck!
