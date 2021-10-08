@@ -42,7 +42,7 @@ This hands-on lab consists of multiple exercises, see the links below. Each exer
 
 ## Exercises
 
-* Exercise 1 - Introduction to Redis: [start](exercises/exercise-1-start.md), [solution](exercises/exercise-1-solution.md)
+* Exercise 1 - Introduction to Redis: [start](exercises/exercise-1-start.md)
 * Exercise 2 - Hello Redis Spring Boot world!: [start](exercises/exercise-2-start.md), [solution](exercises/exercise-2-solution.md)
 * Exercise 3 - Redis data structures and Java: [start](exercises/exercise-3-start.md), [solution](exercises/exercise-3-solution.md)
 * Exercise 4 - Redis and Spring Data: [start](exercises/exercise-4-start.md), [solution](exercises/exercise-4-solution.md)
@@ -53,5 +53,5 @@ This hands-on lab consists of multiple exercises, see the links below. Each exer
 
 * Stuck? The exercises have hints to help you!
 * Stuck? Ask your neighbour to pair with you!
-* Stuck? Every exercise has a working solution right here!
+* Stuck? Every exercise has a working solution right here! (Except exercise 1, which is more of a walkthrough)
 * Still Stuck? Ask one of the instructors!
