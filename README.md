@@ -18,7 +18,7 @@ You are expected to have installed:
 
 We expect you to be somewhat familiar with Java but if you're not: don't worry, working source code is provided for all exercises in this hands-on lab.
 
-## Installing the Redis CLI and verifying that it correctly installed
+## Installing Redis and the Redis CLI and verifying that it correctly installed
 
 MacOS:
 
@@ -42,10 +42,11 @@ This hands-on lab consists of multiple exercises, see the links below. Each exer
 
 ## Exercises
 
-* Exercise 1: [start](exercises/exercise-1-start.md), [solution](exercises/exercise-1-solution.md)
-* Exercise 2: [start](exercises/exercise-2-start.md), [solution](exercises/exercise-2-solution.md)
-* Exercise 3: [start](exercises/exercise-3-start.md), [solution](exercises/exercise-3-solution.md)
-* Exercise 4: [start](exercises/exercise-4-start.md), [solution](exercises/exercise-4-solution.md)
+* Exercise 1 - Introduction to Redis: [start](exercises/exercise-1-start.md), [solution](exercises/exercise-1-solution.md)
+* Exercise 2 - Hello Redis Spring Boot world!: [start](exercises/exercise-2-start.md), [solution](exercises/exercise-2-solution.md)
+* Exercise 3 - Redis data structures and Java: [start](exercises/exercise-3-start.md), [solution](exercises/exercise-3-solution.md)
+* Exercise 4 - Redis and Spring Data: [start](exercises/exercise-4-start.md), [solution](exercises/exercise-4-solution.md)
+* Exercise 5 - Redis and Spring Session: [start](exercises/exercise-5-start.md), [solution](exercises/exercise-4-solution.md)
 
 
 ## Tips
