@@ -1,5 +1,5 @@
 # Exercise 2 - Hello Redis Spring Boot world!
-Enough CLI, time to start writing an actual application! In this exercise we'll build a basic Spring Boot app to interact with Redis from your Java application.
+Enough CLI, time to start writing an actual application! In this exercise we'll build a basic Spring Boot app to interact with Redis from your Java application. For this exercise, the difficulty will be ramped up a little, so we're not telling you exactly what to type, but we expect you to do some searching yourself. If you're stuck, don't dwell too long on it. Instead, check out the hints, the solution or call out one of the instructors, who will be quite happy to help!
 
 ## Goal
 
