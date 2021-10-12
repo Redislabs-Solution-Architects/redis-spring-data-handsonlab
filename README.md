@@ -7,7 +7,7 @@ In this hands-on lab you will learn how to build lightning fast Java application
 
 You are expected to bring:
 
-* A laptop with Linux, MacOS or Windows with WSL or Linux running in a virtual machine.
+* A laptop with Linux, MacOS, Windows (10+) with WSL or Linux running in a virtual machine.
 * A working internet connection (use corporate proxies or bad WiFi at your own peril)
 
 You are expected to have installed:
@@ -55,3 +55,9 @@ This hands-on lab consists of multiple exercises, see the links below. Each exer
 * Stuck? Ask your neighbour to pair with you!
 * Stuck? Every exercise has a working solution right here! (Except exercise 1, which is more of a walkthrough)
 * Still Stuck? Ask one of the instructors!
+
+## Troubleshooting
+
+### General
+
+If your laptop has corporate restrictions in terms of installing software, internet proxies or other restrictions, it might be tricky to get this hands-on lab up and running. Asking the instructor may help, but we can't guarantee we'll get it working and we won't help you circumvent corporate policies.
