@@ -20,3 +20,5 @@ Create a new Maven Spring Boot project by either going to [start.spring.io](http
 * Add a method to the RestController with a `@GetMapping` annotation and the return type being your POJO and retrieve and return the value from the Repository.
 * Build the project and run it.
 * Navigate to http://localhost:8080 and there should be your first Java/Redis/Spring Data app up and running!
+* Wooohooo! You are now a veteran Spring Boot/Spring Data/Redis developer!
+* Take a short break if you want, and then move on to [exercise 3](exercise-3-start.md).
