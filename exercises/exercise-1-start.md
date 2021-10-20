@@ -134,6 +134,7 @@ This will show you the most recent value of the Time Series, in this case `3`.
 ```
 ts.range my_ts 0 2
 ```
+### Next steps
 In your own app you could try something like 'give me all the values in this Time Series between now and a week ago' or something similar. We will get to that in the other exercises when we'll be doing some actual coding! For now, we're done with the basics of Redis and the CLI. If you want to read more about time series, aggregation, compaction and downsampling then check out the [RedisTimeseries documentation](https://oss.redis.com/redistimeseries/).
 
 Feel free to ask any questions to the instructor(s), they're here to help!

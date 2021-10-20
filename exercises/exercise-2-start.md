@@ -1,12 +1,13 @@
 <img src="../img/redis-logo-full-color-rgb.png" height=100/>
 
 # Exercise 2 - Hello Redis Spring Boot world!
-Enough CLI, it's time to start writing an actual application! In this exercise we'll build a basic (Spring Boot)[https://spring.io/projects/spring-boot] app that interacts with Redis. For this exercise, the difficulty will be ramped up a little, so we're not telling you exactly what to type. Instead we expect you to do some searching yourself. If you're stuck, don't dwell too long on it. Instead, check out the hints, the (solution)[exercise-2-solution.md] or reach out to one of the instructors, who will be quite happy to help!
+Enough CLI, it's time to start writing an actual application! In this exercise we'll build a basic [Spring Boot](https://spring.io/projects/spring-boot) app that interacts with Redis. For this exercise, the difficulty will be ramped up a little, so we're not telling you exactly what to type. Instead we expect you to do some searching yourself. If you're stuck, don't dwell too long on it. Instead, check out the hints and the solution [over here](exercise-2-solution.md) or reach out to one of the instructors, who will be quite happy to help!
 
 ## Goals
 
 * Build a basic Spring Boot Redis app
 * Learn what dependencies are used/needed
+* Learn how Spring Data repositories use Redis Hashes
 
 ## Exercise
 ### Creating a new project
@@ -17,6 +18,7 @@ Create a new Maven Spring Boot project by either going to [start.spring.io](http
 ```
 ./mvnw package
 ```
+### Adding some Repository code
 This should all be working successfully. Now that we have bootstrapped a basic Spring Boot App, let's add some Redis in there.
 * We'll start by creating a data structure in Java, so let's make a simple `Message` POJO and give it two `String` attributes: `welcomeText` and `messageText`.
 * Add an id attribute of type `String` and add the `@Id` annotation to it so Spring Data knows that this is the id column.
@@ -30,6 +32,7 @@ This should all be working successfully. Now that we have bootstrapped a basic S
 ```
 * Navigate to http://localhost:8080 and there should be your first Java/Redis/Spring Data app up and running!
 Wooohooo! You are now a veteran Spring Boot/Spring Data/Redis developer!
+### What happened under the hood?
 * Now let's take a look at what actually happened on the Redis side of things. Open up the Redis CLI again and check out which keys are present in Redis after running the application:
 ```
 keys *
@@ -46,7 +49,8 @@ hgetall <key>
 ```
 You should see all your key/value pairs, the id key/value pair and a `_class` key that Spring Data uses to determine the Class of the Hash. For each new `Message` that you add, you should see new keys appear in Redis, where Spring Data generates the key by taking the fully qualified class name, followed by a `:` and the id of the `Message`.
 
+### Next steps
 For more info on the core concepts of Spring Data Redis, feel free to check out the excellent [Spring Data Redis documentation]([)https://spring.io/projects/spring-data-redis)
 
 
-* Take a short break if you want, or play around a bit more with the basics, and then move on to [exercise 3](exercise-3-start.md) when you're ready.
+* Take a short break if you want, take a look at the [solution and hints](exercise-2-solution.md) or play around a bit more with the basics, and then move on to [exercise 3](exercise-3-start.md) when you're ready.
