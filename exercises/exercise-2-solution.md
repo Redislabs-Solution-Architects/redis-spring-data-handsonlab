@@ -12,8 +12,13 @@ Most important parts of the solution:
 
 ### Troubleshooting/hints
 
+Q: I'm not on JDK 16 yet
+A: Feel free to change the `<java.version>` property in the pom.xml to a different Java version. The code will most likely work on version of 11 and upwards, though we only tested the solution on 16.
+
 Q: My application can't connect to Redis
-A: Is Redis running, and is it running at localhost and port 6379? Note: you can also specify a different hostname and port using the `spring.redis.host` and `spring.redis.port` properties in your `application.properties` (or `application.yml` if you prefer YAML)
+A: Is Redis running, and is it running at localhost and port 6379? 
+
+Note: you can specify a different hostname and port using the `spring.redis.host` and `spring.redis.port` properties in your `application.properties` (or `application.yml` if you prefer YAML)
 
 Q: My Repository is not recognized
 A: Did you add the `@Repository` annotation to the interface?
