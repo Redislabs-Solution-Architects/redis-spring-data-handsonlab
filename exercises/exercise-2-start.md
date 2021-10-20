@@ -50,7 +50,7 @@ hgetall <key>
 You should see all your key/value pairs, the id key/value pair and a `_class` key that Spring Data uses to determine the Class of the Hash. For each new `Message` that you add, you should see new keys appear in Redis, where Spring Data generates the key by taking the fully qualified class name, followed by a `:` and the id of the `Message`.
 
 ### Next steps
-For more info on the core concepts of Spring Data Redis, feel free to check out the excellent [Spring Data Redis documentation]([)https://spring.io/projects/spring-data-redis)
+For more info on the core concepts of Spring Data Redis, feel free to check out the excellent [Spring Data Redis documentation](https://spring.io/projects/spring-data-redis)
 
 
 * Take a short break if you want, take a look at the [solution and hints](exercise-2-solution.md) or play around a bit more with the basics, and then move on to [exercise 3](exercise-3-start.md) when you're ready.
