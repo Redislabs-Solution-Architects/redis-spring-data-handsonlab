@@ -21,7 +21,7 @@ public class MessageController {
         this.redisTemplate = redisTemplate;
         Message hp = new Message("Hello", "World", "Good to see you");
         repo.save(hp);
-        redisTemplate.opsForValue().set("Hello to you too", "world!");
+        redisTemplate.opsForValue().set("Hello2u2", "world!");
         Map<String,String> map = new HashMap<>();
         map.put("welcomeText", "Hello");
         map.put("whoText", "World");
@@ -41,7 +41,7 @@ public class MessageController {
 
     @GetMapping("/string")
     public String getString()   {
-        return redisTemplate.opsForValue().get("Hello to you too");
+        return redisTemplate.opsForValue().get("Hello2u2");
     }
 
     @GetMapping("/hash")

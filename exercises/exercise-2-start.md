@@ -18,31 +18,37 @@ Create a new Maven Spring Boot project by either going to [start.spring.io](http
 ```
 ./mvnw package
 ```
+
 ### Adding some Repository code
 This should all be working successfully. Now that we have bootstrapped a basic Spring Boot App, let's add some Redis in there.
 * We'll start by creating a data structure in Java, so let's make a simple `Message` POJO and give it two `String` attributes: `welcomeText` and `messageText`.
 * Add an id attribute of type `String` and add the `@Id` annotation to it so Spring Data knows that this is the id column.
 * We need to tell Spring Data that this is a structure that we want to store as a Redis hash, so add the `@RedisHash` annotation to the class.
 * Next, we'll add a `MessageCrudRepository` interface that extends `CrudRepository<Message, String>`. Be sure to add the `@Repository` annotation so that Spring Data can autowire an implementation of this interface.
-* Add a `MessageController` class that injects the `CrudRepository` in its constructor. In the constructor, create a new instance of our `Message` POJO, populate the attributes and store it in the Repository by its id. Add the `@RestController` annotation to the class.
+* Add a `MessageController` class that injects the `CrudRepository` in its constructor and adds it to an instance variable called `repo`. In the constructor, create a new instance of your `Message` POJO, populate the attributes and store it in the Repository by its id using the `repo.save(..)` method. Add the `@RestController` annotation to the class.
 * Add a `hello()` method to the RestController with a `@GetMapping` annotation and the return type being our `Message` POJO and retrieve and return the value from the Repository using the `findById(..)` method.
 * Build the project and run it:
 ```
 ./mvnw package spring-boot:run
 ```
 * Navigate to http://localhost:8080 and there should be your first Java/Redis/Spring Data app up and running!
+
 Wooohooo! You are now a veteran Spring Boot/Spring Data/Redis developer!
+
 ### What happened under the hood?
 * Now let's take a look at what actually happened on the Redis side of things. Open up the Redis CLI again and check out which keys are present in Redis after running the application:
 ```
 keys *
 ```
+
 You will notice there are two new keys present. Both start with the package and class name of your `Message` class. Since we don't know what Spring Data created for us, let's inspect these using the `type <key>` command. You'll notice that one is a Set and one is a Hash.
+
 * Check the content of the Set by using:
 ```
 smembers <key>
 ```
 You'll see that it contains one member, the id of your stored `Message`. For every `Message` you add to the repository, this set will be updated. Likewise for removals and updates.
+
 * We can also check the contents of the Hash by typing:
 ```
 hgetall <key>
