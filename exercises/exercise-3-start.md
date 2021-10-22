@@ -1,9 +1,9 @@
 <img src="../img/redis-logo-full-color-rgb.png" height=100/>
 
 # Exercise 3 - Redis Data Structures and Java
-Now that you have made your first Spring Boot/Spring Data/Redis application, let's add some of the other Redis data structures to the application. You can use the application that you made in exercise 2, make a new one, or start with the provided exercise 2 solution.
+Now that you have made your first Spring Boot/Spring Data/Redis application, let's add some of the other Redis data structures to the application. You can use the application that you made in exercise 2, make a new one, or start with the provided exercise 2 solution, which can be found [over here](exercise-2-solution.md). Feel free to check out the [Exercise 3 solution](exercise-3-solution.md) in case you run into issues or get stuck. Don't hesitate to reach out to the instructors who are always happy to help!
 
-## Goal
+## Goals
 
 * Learn how to interact with Redis data structures via the `RedisTemplate`
 
