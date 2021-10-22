@@ -16,4 +16,8 @@ In this exercise we will put everything that we've learned together as well as a
 ## Application setup
 * Start with the basic application provided [over here](exercise5-start)
 
-The application we 
+## Consuming a Redis Stream
+* Consume the transactions stream
+* Store the transaction in a Spring Redis repository so we can populate the RediSearch indexes
+* Forward the transaction to the websocket connection
+
