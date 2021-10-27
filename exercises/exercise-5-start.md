@@ -106,3 +106,4 @@ This will get the range out of the sorted set by their scores and with the score
 
 * Build and run the app, and watch in awe as the biggest spenders are now shown in the app!
 
+And this concludes this exercise, and the hands-on lab!
