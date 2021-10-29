@@ -15,7 +15,8 @@ Now that you've seen how basic Spring Data and Redis work in combination with Sp
 ## Exercise
 
 ### Adding a login page to our app
-* In order to have a session that needs to be stored, we need a user to login to our application. For this we will add the Spring Security Spring Boot starter to the `pom.xml` file of our app. You can use the app from Exercise 3 for this.
+* In order to have a session that needs to be stored, we need a user to login to our application. For this we will add the Spring Security Spring Boot starter to the `pom.xml` file of our app. You can use the app from Exercise 3 for this, or create a new one. Don't forget to include the other necessary dependencies.
+
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -68,8 +69,12 @@ Notice how you now have to login again. This is because logged-in user informati
 
 ### Configuring Spring Session to use Redis
 
-* Add the Spring Session Redis dependency to the `pom.xml` file by adding the following element to your `<dependencies>` block:
+* Add the Spring Session Redis dependency to the `pom.xml` file by adding the following elements (if not already there) to your `<dependencies>` block:
 ```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+</dependency>
 <dependency>
     <groupId>org.springframework.session</groupId>
     <artifactId>spring-session-data-redis</artifactId>
