@@ -33,11 +33,11 @@ public class BankTransactionGenerator {
     private static Double balance = 100000.00;
     private static final int TRANSACTION_RATE_MS = 10000;
     private static final String TRANSACTION_KEY = "transaction";
-    private static final String TRANSACTIONS_STREAM = "transactions";
+    private static final String TRANSACTIONS_STREAM = "transactions_lars";
     private static final String ACCOUNT_INDEX = "transaction_account_idx";
     private static final String SEARCH_INDEX = "transaction_description_idx";
-    private static final String BALANCE_TS = "balance_ts";
-    private static final String SORTED_SET_KEY = "bigspenders";
+    private static final String BALANCE_TS = "balance_ts_lars";
+    private static final String SORTED_SET_KEY = "bigspenders_lars";
     private final List<TransactionSource> transactionSources;
     private final SecureRandom random;
     private final DateFormat df = new SimpleDateFormat("yyyy.MM.dd 'at' HH:mm:ss");
