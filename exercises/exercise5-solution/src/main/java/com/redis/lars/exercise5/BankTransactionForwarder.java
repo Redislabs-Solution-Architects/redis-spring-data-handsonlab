@@ -23,7 +23,7 @@ public class BankTransactionForwarder
         implements InitializingBean, DisposableBean, StreamListener<String, MapRecord<String, String, String>> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BankTransactionForwarder.class);
-    private static final String TRANSACTIONS_STREAM = "transactions";
+    private static final String TRANSACTIONS_STREAM = "transactions_lars";
 
     private final Config config;
     private final StringRedisTemplate redis;

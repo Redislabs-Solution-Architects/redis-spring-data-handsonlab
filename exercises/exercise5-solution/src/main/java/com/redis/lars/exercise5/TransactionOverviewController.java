@@ -17,6 +17,8 @@ import com.redislabs.lettusearch.SearchOptions.Highlight.Tag;
 import com.redislabs.lettusearch.SearchResults;
 import com.redislabs.lettusearch.StatefulRediSearchConnection;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations.TypedTuple;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -32,8 +34,8 @@ public class TransactionOverviewController {
 
     private static final String ACCOUNT_INDEX = "transaction_account_idx";
     private static final String SEARCH_INDEX = "transaction_description_idx";
-    private static final String BALANCE_TS = "balance_ts";
-    private static final String SORTED_SET_KEY = "bigspenders";
+    private static final String BALANCE_TS = "balance_ts_";
+    private static final String SORTED_SET_KEY = "bigspenders_";
 
     private final Config config;
     private final StatefulRediSearchConnection<String, String> srsc;
