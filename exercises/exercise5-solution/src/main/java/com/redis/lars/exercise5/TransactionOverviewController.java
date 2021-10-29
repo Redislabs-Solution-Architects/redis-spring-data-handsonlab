@@ -17,8 +17,6 @@ import com.redislabs.lettusearch.SearchOptions.Highlight.Tag;
 import com.redislabs.lettusearch.SearchResults;
 import com.redislabs.lettusearch.StatefulRediSearchConnection;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations.TypedTuple;
 import org.springframework.web.bind.annotation.CrossOrigin;
