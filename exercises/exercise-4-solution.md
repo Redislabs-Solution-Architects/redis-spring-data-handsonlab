@@ -11,4 +11,5 @@ Most important parts of the solution:
 ### Troubleshooting/hints
 
 Q: Even when using Spring Session Redis dependency, I still need to login every time I stop/start the app?
+
 A: Did you add both the Spring Session Redis and the Spring Boot Starter for Redis Reactive?
