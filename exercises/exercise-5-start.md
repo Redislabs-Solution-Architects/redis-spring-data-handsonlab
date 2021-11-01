@@ -131,16 +131,49 @@ This will get the range out of the sorted set by their scores and with the score
 
 ## What's happening in Redis?
 
-Let's take a look at what's happening in Redis while we did this. First we'll take a look at what the data generation app is populating. If you want to see how the data generation app works internally, feel free to check out its source code.
+Let's take a look at what's happening in Redis while we did this. First we'll take a look at what the data generation app is populating. If you want to see how the data generation app works internally, feel free to check out its source code. Now let's use the Redis CLI to check out what's going on under the hood.
 
 ### Redis Stream
 
+The data generation app generates a bank transaction every 10 seconds or so and puts in on a Stream. You can query the stream using:
+
+```
+xread count 10000 streams transactions_lars 0-0
+```
+
+This will give all of the entries on the `transactions_lars` Stream (assuming you have less than 10000 items of course). Remember that our app subscribed to this Stream, so every time a new transaction comes in it's being handled by our app and sent to the UI.
+
 ### Sorted Set
+
+The data generation app also adds every transaction to a Sorted Set. It's adding the transaction amount to the score, and the key of the member of the set is the name of the account. So it adds up all the transaction amounts per account name and stores this in a Sorted Set. So we can get the biggest spenders out by simply querying the Sorted Set like this:
+
+```
+zrangebyscore bigspenders 0 10000 withscores
+```
 
 ### TimeSeries
 
+The data generation app also adds the bank accounts balance to a TimeSeries every time there is a new transaction being generated. This allows us to view the balance over time using a query such as:
+
+```
+ts.range balance_ts_lars 1623000000000 1623230682038
+```
+
 ### Hashes
+
+To be able to search transactions, each transaction is also stored as a Hash in Redis, so it can be indexed by RediSearch so we can search them, e.g. like:
+
+```
+ft.search transaction_description_idx Fuel
+ft.search transaction_description_idx Fuel highlight
+ft.search transaction_description_idx Fuel highlight tags <mytag> </mytag>
+
+```
 
 ### Session data
 
-And this concludes this exercise, and the hands-on lab!
+Last, but not least, session data is also stored in Redis, using the same mechanisms we used in Exercise 4.
+
+## Next steps
+
+This concludes this exercise, and the hands-on lab! We hope you had fun doing the hands-on lab and learned a thing or two!
