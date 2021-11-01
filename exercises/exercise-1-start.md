@@ -18,6 +18,9 @@ docker run -p 6379:6379 redislabs/redismod:latest
 ```
 redis-cli
 ```
+
+By default, the Redis CLI will connect to 127.0.0.1 and port 6379. If you want to use a different hostname and port, you can use the `-h` and `-p` options to specify a diferent hostname and port.
+
 ### Strings and hashes
 * Let's see if we can store something in Redis and retrieve it again, so let's start simple and start with a basic String key/value pair.
 * Add a String key/value pair to Redis with a key of `hello` and a value of `world`:
@@ -51,7 +54,7 @@ and Redis will tell you that it's a hash. Alternatively, you can type:
 ```
 type hello
 ```
-To find out that this key is a string type. If you want to learn more about hashes then check out all the available commands at the [Redis Documentation](https://redis.io/commands#hash). You can use the drop down list on that [same page](https://redis.io/commands) to select a different data structure to find out what commands apply to that particular data structure.
+To find out that this key is a String type. If you want to learn more about hashes then check out all the available commands at the [Redis Documentation](https://redis.io/commands#hash). You can use the drop down list on that [same page](https://redis.io/commands) to select a different data structure to find out what commands apply to that particular data structure.
 
 ### Sorted Sets
 Now, let's take a look at a Sorted Set. A Sorted Set (as the name implies) is an ordered collection of values. In Redis each value will have a score associated with it, and by updating the score as we go along the Set will maintain its ordering according to the score. Think of scenarios like maintaining a high score leaderboard when playing a game, a list of 'biggest spenders' on your bank account or other scenarios where you need to update a ranking/score as more data becomes available in your application.
@@ -84,11 +87,14 @@ Let's start with RediSearch, a full-text search module for Redis. Retrieving key
 ```
 ft.create my_idx on hash prefix 1 my schema hello text phonetic dm:en
 ```
-This command is a little bit more elaborate than the previous ones, so let's explore it in detail a bit more. We're creating an index called `my_idx` on the `hash` datastructure with one prefix `my` (remember that we created a Hash earlier that had the key `myhash`?) and we define the schema to be on the `hello` field (this field is present in the Hash we created earlier) which we define as a `TEXT` field and we also setup phonetic search using the `Double Metaphone for English` matcher. That's quite a handful, so don't worry if that doesn't mean a lot to you right now, let's just see what it actually does!
+This command is a little bit more elaborate than the previous ones, so let's explore it in detail a bit more. We're creating an index called `my_idx` on the `hash` datastructure with one prefix `my` (remember that we created a Hash earlier that had the key `myhash`? also note that if you used a different key for the hash that you should also use a different prefix here) and we define the schema to be on the `hello` field (this field is present in the Hash we created earlier) which we define as a `TEXT` field and we also setup phonetic search using the `Double Metaphone for English` matcher. That's quite a handful, so don't worry if that doesn't mean a lot to you right now, let's just see what it actually does!
 * Let's search our immense data set of 1 Hash and see if we can find what we want by typing a few different commands:
 ```
 ft.search my_idx "world"
 ```
+
+This will return our Hash that we created earlier.
+
 * You can also do a wildcard search:
 ```
 ft.search my_idx "wor*"
@@ -134,9 +140,9 @@ This will show you the most recent value of the Time Series, in this case `3`.
 ```
 ts.range my_ts 0 2
 ```
-### Next steps
+
 In your own app you could try something like 'give me all the values in this Time Series between now and a week ago' or something similar. We will get to that in the other exercises when we'll be doing some actual coding! For now, we're done with the basics of Redis and the CLI. If you want to read more about time series, aggregation, compaction and downsampling then check out the [RedisTimeseries documentation](https://oss.redis.com/redistimeseries/).
 
-Feel free to ask any questions to the instructor(s), they're here to help!
+## Next steps
 
 Well done, you made it through the first exercise! Take a short break if you want, and then move on to [exercise 2](exercise-2-start.md).
