@@ -28,6 +28,6 @@ Notice how this differs from what we did in Exercise 2. In Exercise 2 we used a 
 * Build and run your application.
 * Navigate to http://localhost:8080, http://localhost:8080/hash, http://localhost:8080/string and http://localhost:8080/zset and observe the beauty of your own written Redis/Spring Data application!
 
-Notice how we're using hashes in two different ways in this exercise. Using the `Repository` we can use our own domain model and let Spring Data do the heavy lifting for us to store it in Redis as a hash. Using the `RedisTemplate` we gain access to the Redis API itself and this will give us more fine grained control over the hash. Note that you can still add a lot of control using the `Repository`/`@RedisHash` mechanic, but we did not explore that in this exercise. Check out the Spring Data documentation if you want to learn more about that.
+Notice how we're using hashes in two different ways in this exercise. Using the `Repository` we can use our own domain model and let Spring Data do the heavy lifting for us to store it in Redis as a hash. Using the `RedisTemplate` we gain access to the Redis API itself and this will give us more fine grained control over the hash. Note that you can still add a lot of control using the `Repository`/`@RedisHash` mechanism, but we did not explore that in this exercise. Check out the Spring Data documentation if you want to learn more about that.
 
 * Take a short break if you want, and then move on to [exercise 4](exercise-4-start.md).
