@@ -23,11 +23,11 @@ Create a new Maven Spring Boot project by either going to [start.spring.io](http
 This should all be working successfully. Now that we have bootstrapped a basic Spring Boot App, let's add some Redis in there.
 * We'll start by creating a data structure in Java, so let's make a simple `Message` POJO and give it two `String` attributes: `welcomeText` and `messageText`.
 * Add an id attribute of type `String` and add the `@Id` annotation to it so Spring Data knows that this is the id column.
-* We need to tell Spring Data that this is a structure that we want to store as a Redis hash, so add the `@RedisHash` annotation to the class.
+* We need to tell Spring Data that this is a structure that we want to store as a Redis hash, so add the `@RedisHash` annotation to the class. Also give it the required getters and setters.
 * Next, we'll add a `MessageCrudRepository` interface that extends `CrudRepository<Message, String>`. Be sure to add the `@Repository` annotation so that Spring Data can autowire an implementation of this interface.
-* Add a `MessageController` class that injects the `CrudRepository` in its constructor and adds it to an instance variable called `repo`. In the constructor, create a new instance of your `Message` POJO, populate the attributes and store it in the Repository by its id using the `repo.save(..)` method. Add the `@RestController` annotation to the class.
-* Add a `hello()` method to the RestController with a `@GetMapping` annotation and the return type being our `Message` POJO and retrieve and return the value from the Repository using the `findById(..)` method.
-* Build the project and run it:
+* Add a `MessageController` class that injects the `MessageCrudRepository` in its constructor and adds it to an instance variable called `repo`. In the constructor, create a new instance of your `Message` POJO, populate the attributes and store it in the Repository by its id using the `repo.save(..)` method. Add the `@RestController` annotation to the class.
+* Add a `hello()` method to the RestController with a `@GetMapping` annotation and the return type being our `Message` POJO and retrieve and return the value from the Repository using the `findById(..)` method (and the id that you used when populating the `Message` object).
+* Build the project and run it (make sure Redis is still running locally, or restart it if it isn't):
 ```
 ./mvnw package spring-boot:run
 ```
@@ -41,7 +41,7 @@ Wooohooo! You are now a veteran Spring Boot/Spring Data/Redis developer!
 keys *
 ```
 
-You will notice there are two new keys present. Both start with the package and class name of your `Message` class. Since we don't know what Spring Data created for us, let's inspect these using the `type <key>` command. You'll notice that one is a Set and one is a Hash.
+You will notice there are two new keys present. Both start with the package and class name of your `Message` class and one of them ends with the id that you specified when creating a new instance of your `Message`. Since we don't know what Spring Data created for us, let's inspect these using the `type <key>` command. You'll notice that one is a Set and one is a Hash.
 
 * Check the content of the Set by using:
 ```
@@ -56,7 +56,7 @@ hgetall <key>
 You should see all your key/value pairs, the id key/value pair and a `_class` key that Spring Data uses to determine the Class of the Hash. For each new `Message` that you add, you should see new keys appear in Redis, where Spring Data generates the key by taking the fully qualified class name, followed by a `:` and the id of the `Message`.
 
 ### Next steps
-For more info on the core concepts of Spring Data Redis, feel free to check out the excellent [Spring Data Redis documentation](https://spring.io/projects/spring-data-redis)
+This concludes your first steps with Redis and Spring Data! For more info on the core concepts of Spring Data Redis, feel free to check out the excellent [Spring Data Redis documentation](https://spring.io/projects/spring-data-redis)
 
 
-* Take a short break if you want, take a look at the [solution and hints](exercise-2-solution.md) or play around a bit more with the basics, and then move on to [exercise 3](exercise-3-start.md) when you're ready.
+* Take a short break if you want, take a look at the [solution and hints](exercise-2-solution.md) if you want or play around a bit more with the basics, and then move on to [exercise 3](exercise-3-start.md) when you're ready.
