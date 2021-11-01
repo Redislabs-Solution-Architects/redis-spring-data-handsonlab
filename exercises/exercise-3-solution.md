@@ -10,6 +10,9 @@ Most important parts of the solution:
 
 ### Troubleshooting/hints
 
+Hint: To retrieve a Hash with all its attributes, you can use `redisTemplate.opsForHash.entries(..)` method.
+Hint: To get members out of a Sorted Set by their scores, you can use the `redisTemplate.opsForZSet.rangeByScore(..)` method.
+
 Q: My `redisTemplate.opsForHash(..)` method is returning `Map<Object,Object>` and I need `Map<String,String>`. How to get rid of the compiler warning?
 
 A: In the solution project, we cast HashOperations<Object, Object, Object> to HashOperations<String, String, String> before getting the entries out. There may be more efficient ways to achieve the same. ;)

@@ -24,7 +24,7 @@ Notice how this differs from what we did in Exercise 2. In Exercise 2 we used a 
 * In the constructor, use the `redisTemplate.opsForZSet().add` method to add a few entries to a Sorted Set called `mysortedset2`. Add entries called "two" with a score of 2.0, "three" with a score of 3.0 and "one" with a score of 1.0. (These are the same entries we added to a Sorted Set during Exercise 1)
 * In your `MessageController`, add a `getString()` method with a `@GetMapping("/string")` and, using the `RedisTemplate`, return the String value that you stored in the constructor.
 * In your `MessageController`, add a `getHash()` method with a `@GetMapping("/hash")` and, using the `RedisTemplate` return the `Map<String, String>` value that you stored in the constructor.
-* In your `MessageController`, add a `getZSet()` method with a `@GetMapping("/zset")` and, using the `RedisTemplate` return the `Set<String>` value that you stored in the constructor.
+* In your `MessageController`, add a `getZSet()` method with a `@GetMapping("/zset")` and, using the `RedisTemplate` return the `Set<String>` values that you stored in the constructor by their scores.
 * Build and run your application.
 * Navigate to http://localhost:8080, http://localhost:8080/hash, http://localhost:8080/string and http://localhost:8080/zset and observe the beauty of your own written Redis/Spring Data application!
 
