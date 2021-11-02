@@ -57,7 +57,7 @@ type hello
 To find out that this key is a String type. If you want to learn more about hashes then check out all the available commands at the [Redis Documentation](https://redis.io/commands#hash). You can use the drop down list on that [same page](https://redis.io/commands) to select a different data structure to find out what commands apply to that particular data structure.
 
 ### Sorted Sets
-Now, let's take a look at a Sorted Set. A Sorted Set (as the name implies) is an ordered collection of values. In Redis each value will have a score associated with it, and by updating the score as we go along the Set will maintain its ordering according to the score. Think of scenarios like maintaining a high score leaderboard when playing a game, a list of 'biggest spenders' on your bank account or other scenarios where you need to update a ranking/score as more data becomes available in your application.
+Now, let's take a look at a Sorted Set. A Sorted Set (as the name implies) is an ordered collection of unique values. In Redis each value will have a score associated with it, and by updating the score as we go along the Set will maintain its ordering according to the score. Think of scenarios like maintaining a high score leaderboard when playing a game, a list of 'biggest spenders' on your bank account or other scenarios where you need to update a ranking/score as more data becomes available in your application.
 
 * We can add members to a Set directly by using the `zadd` command. There is no need to set a key first. So let's add three members to a Sorted Set using the following commands:
 ```
