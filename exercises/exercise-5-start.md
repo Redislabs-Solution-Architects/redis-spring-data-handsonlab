@@ -5,7 +5,10 @@
 In this exercise we will put everything that we've learned together as well as adding a few more interesting features. We'll be building a real application this time so let's get started! For this part we've provided you with a basic scaffolding application with a fully functional front-end which can be found [over here](exercise5-start/). You will be building the backend to make the whole application fully functional. We also provided a separate app for test data generation that can be found [over here](excercise5-datageneration)
 
 ## Architecture
-Data generation app -> Generates bank transactions and puts them on a Redis Stream. It also populates a RediSearch index and creates a TimeSeries for the account balance and a Sorted Set for the 'biggest spenders' on the account. The transactions Stream is stored under a key called `transactions_lars` (as `lars` is the only user in the app at the moment), the TimeSeries under a key called `balance_ts_lars`, the Sorted Set under a key called `bigspenders_lars` and the search indices under a general key.
+Data generation app -> Generates bank transactions and puts them on a Redis Stream. It also populates a RediSearch index and creates a TimeSeries for the account balance and a Sorted Set for the 'biggest spenders' on the account. The transactions Stream is stored under a key called `transactions_lars` (as `lars` is the only user in the app at the moment), the TimeSeries under a key called `balance_ts_lars`, the Sorted Set under a key called `bigspenders_lars` and the search indices under a general key. See below picture for the overall architecture of the app that we're going to build.
+
+
+<img src="../img/architecture.png" height=400 alt="Architecture overview"/>
 
 ## Goals
 
