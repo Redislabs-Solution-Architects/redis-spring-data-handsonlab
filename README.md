@@ -12,7 +12,7 @@ You are expected to bring:
 
 You are expected to have installed:
 
-* [JDK 16 or higher](https://adoptopenjdk.net/?variant=openjdk16&jvmVariant=hotspot) (Note: you should be fine on 8 or up, but we tested this on 16.)
+* [JDK 16 or higher](https://adoptopenjdk.net/?variant=openjdk16&jvmVariant=hotspot) (Note: you should be fine on 11 or up, but we tested this on 16.)
 * An IDE of your choice, e.g. [vscode](https://code.visualstudio.com/), [idea](https://www.jetbrains.com/idea/), [eclipse](https://www.eclipse.org/eclipseide/) or [netbeans](https://netbeans.apache.org/)
 * Docker desktop (Note: another way of running a Docker container locally is also fine)
 
@@ -61,3 +61,7 @@ This hands-on lab consists of multiple exercises, see the links below. Each exer
 ### General
 
 If your laptop has corporate restrictions in terms of installing software, internet proxies or other restrictions, it might be tricky to get this hands-on lab up and running. Asking the instructor may help, but we can't guarantee we'll get it working and we won't help you circumvent corporate policies.
+
+### Redis
+
+Keep Redis running while running the exercises and also while building the apps. Support for TestContainers is coming up in the next release of this hands-on lab!
