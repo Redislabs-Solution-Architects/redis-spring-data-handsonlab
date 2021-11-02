@@ -8,6 +8,7 @@ In this hands-on lab you will learn how to build lightning fast Java application
 You are expected to bring:
 
 * A laptop with Linux, MacOS, [Windows (10+) with WSL](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database) or another version of Windows with Linux running inside a virtual machine.
+* Alternatively, you can run the whole hands-on lab on [GitPod](https://gitpod.io/#https://github.com/Redislabs-Solution-Architects/redis-spring-data-handsonlab) Mind you: there's a 30-minute limit on the free tier, but that shouldn't be a problem as the exercises in this hands-on lab stand by themselves.
 * A working internet connection (use corporate proxies or bad WiFi at your own peril)
 
 You are expected to have installed:
@@ -60,7 +61,7 @@ This hands-on lab consists of multiple exercises, see the links below. Each exer
 
 ### General
 
-If your laptop has corporate restrictions in terms of installing software, internet proxies or other restrictions, it might be tricky to get this hands-on lab up and running. Asking the instructor may help, but we can't guarantee we'll get it working and we won't help you circumvent corporate policies.
+If your laptop has corporate restrictions in terms of installing software, internet proxies or other restrictions, it might be tricky to get this hands-on lab up and running. Asking the instructor may help, but we can't guarantee we'll get it working and we won't help you circumvent corporate policies. Running the hands-on lab via [GitPod](https://gitpod.io/#https://github.com/Redislabs-Solution-Architects/redis-spring-data-handsonlab) might be a better alternative in that case.
 
 ### Redis
 
