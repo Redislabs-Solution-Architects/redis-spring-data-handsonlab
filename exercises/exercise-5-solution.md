@@ -11,3 +11,7 @@ Most important parts of the solution:
 
 ### Troubleshooting/hints
 
+Q: There's no data coming in my app?
+
+A: Did you start the data generation app?
+
