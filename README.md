@@ -66,3 +66,7 @@ If your laptop has corporate restrictions in terms of installing software, inter
 ### Redis
 
 Keep Redis running while running the exercises and also while building the apps. Support for TestContainers is coming up in the next release of this hands-on lab!
+
+# Disclaimer
+
+Redis Labs proprietary, subject to the Redis Enterprise Software and/or Cloud Services license
