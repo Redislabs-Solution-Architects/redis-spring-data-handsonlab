@@ -2,7 +2,8 @@
 tasks:
   - init: echo 'init script' # runs during prebuild
     command: sdk install java 17.0.1.12.1-amzn < /dev/null && sudo apt-get --assume-yes install redis-server && docker pull redislabs/redismod:latest
-
+  - command: |
+      gp open README.md
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 6379
