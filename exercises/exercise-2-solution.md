@@ -24,4 +24,4 @@ Q: My Repository is not recognized
 A: Did you add the `@Repository` annotation to the interface?
 
 Q: My RestController is not recognized
-A: Did you add the `@RestController` annotation to the class?
+A: Did you add the `@RestController` and the `@GetMapping` annotation to the class?
