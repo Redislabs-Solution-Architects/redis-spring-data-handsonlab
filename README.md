@@ -65,7 +65,7 @@ If your laptop has corporate restrictions in terms of installing software, inter
 
 ### Redis
 
-Keep Redis running while running the exercises and also while building the apps. Support for TestContainers is coming up in the next release of this hands-on lab!
+Make sure Redis is running when running the exercises. During building this is not required as the integration tests support [Testcontainers](https://www.testcontainers.org/).
 
 # Disclaimer
 
