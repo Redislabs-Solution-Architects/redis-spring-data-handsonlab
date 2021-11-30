@@ -1,15 +1,15 @@
 package com.redis.lars.exercise3;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
-import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
 
-@SpringJUnitConfig
+@SpringBootTest
 @Testcontainers
 class Exercise3ApplicationTests {
 
@@ -22,8 +22,8 @@ class Exercise3ApplicationTests {
 
 	@DynamicPropertySource
 	static void redisProperties(DynamicPropertyRegistry registry) {
-		registry.add("redis.host", redisContainer::getContainerIpAddress);
-		registry.add("redis.posrt", redisContainer::getFirstMappedPort);
+		registry.add("spring.redis.host", redisContainer::getContainerIpAddress);
+		registry.add("spring.redis.port", redisContainer::getFirstMappedPort);
 	}
 
 	@Test
