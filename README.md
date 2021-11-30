@@ -3,43 +3,27 @@
 ## Building lightning fast Java applications using Redis, Spring Data and Spring Session
 In this hands-on lab you will learn how to build lightning fast Java applications using Redis and some of its datastructures and modules, together with Spring Data and Spring Session. You will learn how easy it is to build extremely fast applications using only a minimum of code. The entire hands-on lab is self-service and is made up of several exercises. Each exercise comes with a working solution, so feel free to take a peek in case you get stuck!
 
+
+The hands-on lab is hosted remotely via [Gitpod](https://gitpod.io/).
+
 ## Prerequisites
 
-You are expected to bring:
-
-* A laptop with Linux, MacOS, [Windows (10+) with WSL](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database) or another version of Windows with Linux running inside a virtual machine.
-* Alternatively, you can run the whole hands-on lab on [GitPod](https://gitpod.io/#https://github.com/Redislabs-Solution-Architects/redis-spring-data-handsonlab). This comes with all dependencies included.
+* A laptop/desktop equipped with a modern browser
 * A working internet connection (use corporate proxies or bad WiFi at your own peril)
+* Click the 'Open in Gitpod' button in the `Getting Started` section to spin up the hands-on lab on Gitpod (Github/GitLab or Atlassian account required)
+redis-spring-data-handsonlab)
+* The Gitpod instance will setup all required dependencies for you, including an IDE, no need to install anything!
 
-You are expected to have installed:
+If you don't like Gitpod, you can also clone the repo and work locally. In that case [JDK 16 or higher](https://adoptopenjdk.net/?variant=openjdk16&jvmVariant=hotspot) is required, along with [Docker](https://www.docker.com/products/docker-desktop) and an IDE, e.g. [vscode](https://code.visualstudio.com/), [idea](https://www.jetbrains.com/idea/), [eclipse](https://www.eclipse.org/eclipseide/) or [netbeans](https://netbeans.apache.org/)
 
-* [JDK 16 or higher](https://adoptopenjdk.net/?variant=openjdk16&jvmVariant=hotspot) (Note: you should be fine on 11 or up, but we tested this on 16.)
-* An IDE of your choice, e.g. [vscode](https://code.visualstudio.com/), [idea](https://www.jetbrains.com/idea/), [eclipse](https://www.eclipse.org/eclipseide/) or [netbeans](https://netbeans.apache.org/)
-* Docker desktop (Note: another way of running a Docker container locally is also fine)
+## Required knowledge
 
 We expect you to be somewhat familiar with Java but if you're not: don't worry, working source code is provided for all exercises in this hands-on lab.
 
-## Installing Redis and the Redis CLI and verifying that it correctly installed
-
-MacOS:
-
-```bash
-brew install redis
-redis-cli --version
-```
-
-Linux:
-
-```bash
-sudo apt install redis-server
-redis-cli --version
-```
-
-You should now be all set and ready to go!
-
 ## Getting started
-This hands-on lab consists of multiple exercises, see the links below. Each exercise has a goal and a set of sub goals to achieve. A working solution is also provided as well as several hints in case you get stuck. Start with exercise 1 and work your way from there. Good luck and enjoy!
+Use the button below to create a Gitpod instance and run this hands-on lab. This hands-on lab consists of multiple exercises, see the links below. Each exercise has a goal and a set of sub goals to achieve. A working solution is also provided as well as several hints in case you get stuck. Start with exercise 1 and work your way from there. Good luck and enjoy!
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Redislabs-Solution-Architects/)
 
 ## Exercises
 
@@ -61,7 +45,7 @@ This hands-on lab consists of multiple exercises, see the links below. Each exer
 
 ### General
 
-If your laptop has corporate restrictions in terms of installing software, internet proxies or other restrictions, it might be tricky to get this hands-on lab up and running. Asking the instructor may help, but we can't guarantee we'll get it working and we won't help you circumvent corporate policies. Running the hands-on lab via [GitPod](https://gitpod.io/#https://github.com/Redislabs-Solution-Architects/redis-spring-data-handsonlab) might be a better alternative in that case.
+If your laptop has corporate restrictions in terms of installing software, internet proxies or other restrictions, it might be tricky to get this hands-on lab up and running, even though we minimised the required dependencies by running this hands-on lab in the browser via Gitpod. Asking the instructor may help, but we can't guarantee we'll get it working and we won't help you circumvent corporate policies.
 
 ### Redis
 
