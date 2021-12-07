@@ -23,7 +23,7 @@ We expect you to be somewhat familiar with Java but if you're not: don't worry, 
 ## Getting started
 Use the button below to create a Gitpod instance and run this hands-on lab. This hands-on lab consists of multiple exercises, see the links below. Each exercise has a goal and a set of sub goals to achieve. A working solution is also provided as well as several hints in case you get stuck. Start with exercise 1 and work your way from there. Good luck and enjoy!
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Redislabs-Solution-Architects/)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Redislabs-Solution-Architects/redis-spring-data-handsonlab)
 
 ## Exercises
 
