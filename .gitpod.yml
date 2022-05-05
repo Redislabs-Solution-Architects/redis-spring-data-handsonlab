@@ -1,13 +1,9 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - name: Install JDK
-    init: sdk install java 18-amzn
-    openMode: split-right
-  - name: Pull docker image
-    init:  docker pull redis/redis-stack-server:latest
-    openMode: split-right
+  - init: echo 'init script' # runs during prebuild
+    command: echo 'start script'
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
-  - port: 6379
+  - port: 3000
     onOpen: open-preview
