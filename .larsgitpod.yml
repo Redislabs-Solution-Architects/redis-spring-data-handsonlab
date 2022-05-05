@@ -1,6 +1,6 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: echo 'init script' && sdk install java 17.0.1.12.1-amzn < /dev/null && sudo apt-get --assume-yes install redis-server && docker pull redislabs/redismod:latest
+  - init: echo 'init script' && sdk install java 18-amzn < /dev/null && docker pull redis/redis-stack-server:latest
   - command: |
       gp open README.md
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
