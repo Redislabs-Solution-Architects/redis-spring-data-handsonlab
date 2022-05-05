@@ -14,6 +14,11 @@ ports:
     visibility: public
 vscode:
   extensions:
+    - redhat.java
     - vscjava.vscode-java-pack
     - pivotal.vscode-spring-boot
     - gabrielbb.vscode-lombok
+    - vscjava.vscode-java-debug
+    - vscjava.vscode-java-dependency
+    - vscjava.vscode-java-test
+    - vscjava.vscode-maven
