@@ -4,6 +4,7 @@ tasks:
     init: |
       sdk install java 18-amzn
       docker pull redis/redis-stack-server:latest
+      gp sync-done initphase
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
