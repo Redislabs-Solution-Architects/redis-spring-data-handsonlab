@@ -12,7 +12,7 @@ Hello and thank you for joining this hands-on lab! We're happy to have you join,
 ### Starting Redis and opening the CLI
 * Open a terminal Window and start a Redis server by using the following command:
 ```
-docker run -p 6379:6379 redislabs/redismod:latest
+docker run -p 6379:6379 redis/redis-stack-server:latest
 ```
 * In a second terminal Window, open the Redis CLI by typing:
 ```
