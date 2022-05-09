@@ -15,7 +15,6 @@ vscode:
     - vscjava.vscode-java-pack
     - pivotal.vscode-spring-boot
     - gabrielbb.vscode-lombok
-    - redhat.java
     - vscjava.vscode-java-debug
     - vscjava.vscode-java-dependency
     - vscjava.vscode-maven
