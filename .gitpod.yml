@@ -19,3 +19,4 @@ vscode:
     - vscjava.vscode-java-debug
     - vscjava.vscode-java-dependency
     - vscjava.vscode-maven
+    - vscjava.vscode-java-test
