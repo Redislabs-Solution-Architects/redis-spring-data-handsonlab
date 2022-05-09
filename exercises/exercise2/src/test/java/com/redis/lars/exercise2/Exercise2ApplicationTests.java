@@ -13,7 +13,7 @@ import org.testcontainers.utility.DockerImageName;
 @Testcontainers
 class Exercise2ApplicationTests {
 
-	static final String REDIS_IMAGE = "redislabs/redismod:latest";
+	static final String REDIS_IMAGE = "redis/redis-stack-server:latest";
 	static final int REDIS_PORT = 6379;
 
 	@Container
